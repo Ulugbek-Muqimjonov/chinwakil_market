@@ -7,4 +7,7 @@ eladdnavtbn.addEventListener("click", function() {
     document.body.classList.remove("active");
 });
 
-console.log(eladdnavtbn);
+var elbtn = document.querySelector(".btn");
+elbtn.addEventListener("click", function() {
+    alert("xaridingiz uchun raxmat");
+})
