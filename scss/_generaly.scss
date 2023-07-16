@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+img {
+    display: block;
+}
+body  {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    background-color:  #f5f7fa;
+    font-family: "Dosis";
+    font-style: normal;
+    font-weight: 400;;
+    overflow-x: hidden;
+    // background-image: url("../images/bg.png");
+    background-color: #222333;
+}
+.site-main {
+    flex-grow: 1;
+}
+a {
+    display: inline-block;
+}
+img {
+    display: block;
+}

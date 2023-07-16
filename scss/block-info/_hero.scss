@@ -1,0 +1,135 @@
+@use "../mixins";
+.site-main {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    &__list {
+        @include mixins.unstyled-list($col:15px,$row:20px);
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        // background-color: #fff;
+    }
+    &__img {
+        // width:inherit;
+        width: 132px;
+        height: 140px;
+        border-radius: 20px;
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 50px;
+        text-align: center;
+        color: #fff;
+    }
+    &__card {
+        min-width:200px;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    &__phone-year {
+        display:block;
+        margin-bottom: 20px;
+        font-size: 17px;
+        color: #fff;
+    }
+    &__span{
+        display:flex;
+        column-gap: 8px;
+        align-items: flex-end;       
+        margin: 0;
+        padding-top: 10px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        border-bottom: 1px solid #fff;
+    }
+    &__bold {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 5px;
+        font-size: 15px;
+        color: #a4b3cb;
+        font-weight: 700;
+        &::before {
+            display: inline-block;
+            background-image: url("../../images/arrow2.svg");
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            background-position: center;
+            content: "";
+        }
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        min-width:120px;
+        padding: 13px 15px;
+        border-radius: 8px;
+        border: none;
+        background-color: #128603;
+        color: #fff;
+        font-weight: 600;
+        &:hover {
+            cursor: pointer;
+        }
+        &::before {
+         @include mixins.psevdo-el(20px,20px,"../../images/karzinka.svg")
+        }
+    }
+    &__back {
+        @include mixins.background-img(24px,24px,"../../images/arrow-left.svg",center,center)
+    }
+}
+
+@media only screen and (min-width:465px) and (max-width:577px) {
+    .site-main {
+        &__img {
+            width: 170px;
+            height: 180px;
+        }
+    }
+}
+@media only screen and (min-width:577px) and (max-width:777px) {
+    .site-main {
+        &__img {
+            width: 170px;
+            height: 180px;
+        }
+        &__phone-year {
+            font-size: 26px;
+        }
+        &__card {
+            max-width:350px;
+        }
+        &__span {
+            font-size: 14px;
+        }
+        &__bold {
+            font-size: 18px;
+        }
+    }
+}
+@media only screen and (min-width:778px) {
+    .site-main {
+        &__img {
+            width: 190px;
+            height: 190px;
+        }
+        &__phone-year {
+            font-size: 28px;
+        }
+        &__card {
+            max-width:380px;
+        }
+        &__span {
+            font-size: 15px;
+        }
+        &__bold {
+            font-size: 19px;
+        }
+    }
+}

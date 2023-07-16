@@ -1,0 +1,37 @@
+@use "../mixins";
+.hero {
+    padding-top: 20px;
+    text-align: center;
+    // @include mixins.background-img(100%,auto,"../../images/img1.jpg",center,center);
+    &__wrapper {
+        @include mixins.display($row:20px);
+    }
+    &__title {
+        margin: 0;
+        margin-bottom: 50px;
+        color:#fff;
+        font-size: 31px;
+    }
+    &__link {
+        min-width: 200px;
+        padding: 15px 20px;
+        border: 1px solid #fff;
+        border-radius:15px;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        box-shadow: 0 0 13px 0 rgba(189,232,29,0.79);
+        -webkit-box-shadow: 0 0 13px 0 rgba(189,232,29,0.79);
+        -moz-box-shadow: 0 0 13px 0 rgba(189,232,29,0.79);
+        transition: background-color 0.5s ease,color 0.5s ease;
+        &:hover {
+            background-color: #fff;
+            color:#000;
+        }
+        &:last-child {
+            background-color:red;
+
+        }
+    }
+}
